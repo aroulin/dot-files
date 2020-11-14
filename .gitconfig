@@ -14,7 +14,8 @@
     bd = branch -d
     bD = branch -D
     dc = diff --cached
-    cas = '!f() { GIT_COMMITTER_NAME="$1" GIT_COMMITTER_EMAIL="$2" git commit --author="$1 $2" }; f' 
+    cas = "!f() { GIT_COMMITTER_NAME=\"$1\" GIT_COMMITTER_EMAIL=\"$2\" git commit --author=\"$1 <$2>\"; }; f" 
+    cass = "!f() { GIT_COMMITTER_NAME=\"$1\" GIT_COMMITTER_EMAIL=\"$2\" git commit -s --author=\"$1 <$2>\"; }; f" 
 
     # Feature improving aliases
     st = status -sb
